@@ -1,0 +1,47 @@
+.container h1{
+    animation: changeColor1 5s infinite; 
+    color: #ec7f7f;
+    font-weight: bold;
+    text-align: center;
+}
+@keyframes changeColor1 {
+    25% { color: #d1e3ff; } /* เริ่มที่สีเดิม */
+    50% { color: #7f7fec; } /* เปลี่ยนสีไปเป็นสีใหม่ที่ต้องการ (ตัวอย่างเช่น #7f7fec) ที่ครึ่งทางของการทำงานของ animation */
+    100% { color: #ec7f7f; } /* กลับมาสู่สีเดิม */
+}
+.nav-pills .btn-primary {
+    margin: -5px; /* ระยะห่างของปุ่ม */
+    margin-left: 10px;
+    background-color: #fb8fc5; /* สีพื้นหลังของปุ่ม */
+    border: none; /* ลบขอบสีน้ำเงิน */
+    border-radius: 16px;
+    margin-top: 0px; /* ระยะห่างของปุ่มกับตัวเมนู */
+    margin-bottom: 0px; /* ระยะห่างของปุ่มกับตัวเมนู */
+    animation: changeColor 10s infinite; /* เล่น animation เปลี่ยนสีเรื่อย ๆ */
+    transition: transform 0.2s ease; /* เพิ่ม transition เมื่อปุ่มถูกกด */
+    box-shadow: 0 0.15rem 0.75rem rgba(0, 0, 0, 0.1); /* เพิ่มเงาให้ปุ่ม */
+}
+.navbar-nav .btn-primary:active {
+    transform: scale(1.1); /* ขยายขนาดของปุ่มเมื่อถูกกด */
+}
+
+.nav-pills .btn-primary:hover {
+    background-color: #fdbcf4; /* เปลี่ยนสีพื้นหลังเมื่อโฮเวอร์เป็นสีน้ำเงินเข้ม */
+}
+.advertisement-bar{
+    margin-top: -22px;
+    height: 50px;
+}
+.advertisement-bar button {
+    background-color: #4CAF50; /* กำหนดสีพื้นหลังของปุ่ม */
+    color: white; /* กำหนดสีของตัวอักษรในปุ่ม */
+    padding: 5px 10px; /* กำหนดขนาดของปุ่ม */
+    border: none; /* กำหนดให้ไม่มีเส้นขอบ */
+    border-radius: 5px; /* กำหนดรูปร่างของมุมปุ่ม */
+    cursor: pointer; /* เปลี่ยนเคอร์เซอร์เป็นเคอร์เซอร์ชี้ */
+    transition: background-color 0.3s; /* ทำให้การเปลี่ยนสีพื้นหลังของปุ่มมีการเปลี่ยนแปลงเรียบขึ้น */
+}
+
+.advertisement-bar button:hover {
+    background-color: #45a049; /* กำหนดสีพื้นหลังของปุ่มเมื่อเมาส์ชี้ */
+}

@@ -1,0 +1,50 @@
+.coupon {
+    border-radius: 12px;
+    box-shadow: 10px 8px 10px #d6d5d533;
+    background:  rgb(248, 237, 176); 
+    animation: colorCycle 5s infinite alternate; /* Animation properties */
+}
+
+@keyframes colorCycle {
+    50% {
+        background-color: rgb(252, 237, 153); /* Initial color */
+    }
+    50% {
+        background: linear-gradient(45deg, rgba(255, 221, 221, 1) 0%, rgba(255, 152, 67, 1) 50%, rgba(242, 252, 69, 1) 100%);
+    }
+    100% {
+        background-color: rgb(249, 99, 124); /* Final color (pink) */
+    }
+}
+body {
+    background: rgb(251, 253, 255);
+    margin: 0; /* เอา margin ที่ถูกกำหนดไว้เริ่มต้นออก เพื่อไม่ให้เกิดช่องว่างด้านข้าง */
+    padding: 0; /* เอา padding ที่ถูกกำหนดไว้เริ่มต้นออก เพื่อไม่ให้เกิดช่องว่างด้านข้าง */    
+}
+.code:hover {
+    background: black;
+    color: #fff;
+    cursor: pointer;
+}
+.nav-link {
+    color: black; /* เปลี่ยนสีของตัวหนังสือในแท็บเป็นสีดำ */
+    transition: color 0.3s;
+}
+.nav-link:hover  {
+    color: white; /* เปลี่ยนสีของตัวหนังสือเมื่อแท็บถูกคลิก */
+}
+.border-right {
+ border-right: 3px solid #fff;
+}
+.h1{
+   color: white;
+}
+.container h1{
+    animation: changeColor1 5s infinite; 
+    color: #ec7f7f;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+

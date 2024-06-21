@@ -1,0 +1,99 @@
+/* gallery */
+
+body {
+	display: flex;
+	padding-top: 70px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	/* ทำให้ container อยู่ตรงกลางของหน้าจอ */
+	margin: 0;
+	/* ลบ margin ที่ถูกกำหนดโดย default ของ body */
+	background-color: #ffffff;
+	display: block;
+}
+
+/* กำหนดสีข้อความและพื้นหลังใน .jumbotron */
+.jumbotron {
+	color: #fec3df;
+	background: #101212;
+}
+
+/* กำหนดสีพื้นหลังของ Navbar ที่มีคลาส .navbar-inverse */
+/* styles.css */
+.navbar-inverse {
+	background: #fec3df;
+	border: none;
+}
+
+/* กำหนดสีข้อความใน Navbar ที่มีคลาส .navbar-inverse */
+.navbar-inverse .navbar-nav>li>a {
+	color: #313131;
+}
+
+/* กำหนดสีข้อความใน Navbar Brand ที่มีคลาส .navbar-inverse */
+.navbar-inverse .navbar-brand {
+	color: #101212;
+}
+
+/* กำหนดลักษณะการแสดงผลของ Flex Container ที่มีคลาส .flex */
+.flex {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+h1,
+.header-text {
+	color: #000000;
+	font-family: 'Impact', sans-serif;
+}
+
+h3,
+.text-right {
+	text-align: right;
+	font-family: 'Impact', sans-serif;
+}
+
+ .border-box {
+ 	width: 700px;
+ 	height: auto;
+ 	padding: 10px;
+ 	box-sizing: border-box;
+ 	border-radius: 15px;
+ 	background-color: #fec3df;
+ 	margin: 50px auto 100px;
+ 	position: relative;
+ 	top: 30%;
+ 	transform: translateY(-50%);
+ }
+
+/* ส่วนของปุ่ม */
+button {
+	padding: 10px 20px;
+	font-size: 16px;
+	background-color: #000000;
+	color: rgb(255, 255, 255);
+	border: 20px;
+	cursor: pointer;
+	border-radius: 25px;
+	box-sizing: border-box;
+	margin-left: 5px;
+}
+.centered-search-bar {
+	display: flex;
+	justify-content: center;
+	/* จัดให้แถบค้นหาอยู่ตรงกลางของหน้าจอ */
+	align-items: center;
+}
+
+input {
+	padding: 10px;
+	/* ปรับ padding ให้มีความสูงเท่ากันกับ button */
+	font-size: 16px;
+	width: 650px;
+	border-radius: 15px;
+	box-sizing: border-box;
+	/* จัดการให้ padding ไม่เพิ่มขนาดของ input */
+	margin-right: 10px;
+}

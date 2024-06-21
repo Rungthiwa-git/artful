@@ -1,0 +1,121 @@
+.navbar {
+    height: 100px; /* ปรับความสูงของ Navbar ตามที่ต้องการ */
+    line-height: 100px; /* ปรับระยะห่างระหว่างบรรทัดสำหรับศูนย์กลางเท่ากับความสูงของ Navbar */
+}
+.navbar-nav > li > a {
+    color: #585858;
+    font-size: 18px; /* ปรับขนาดตัวอักษรตามที่ต้องการ */
+    margin-top: 15px;
+    font-family:  sans-serif;
+    font-weight: bold;
+}
+/* ประกาศ keyframes สำหรับการเปลี่ยนสี */
+@keyframes changeColor {
+    0% { background-color: #fb8fc5; } /* สีเริ่มต้น */
+    33% { background-color: #b4c9ff; } /* สีระหว่าง */
+    66% { background-color: #ff96d5; } /* สีระหว่าง */
+    100% { background-color: #fb8fc5; } /* สีสุดท้าย */
+  }
+  
+  /* ใช้ animation เพื่อเล่น keyframes */
+  .navbar-nav .btn-primary {
+    margin: -5px; /* ระยะห่างของปุ่ม */
+    margin-left: 18px;
+    color: white; /* เปลี่ยนสีตัวอักษรเป็นสีขาว */
+    background-color: #fb8fc5; /* สีพื้นหลังของปุ่ม */
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2), /* เงาดำ */
+                inset 2px 2px 7px rgba(54, 54, 54, 0.2); /* เงาดำด้านใน */
+    border: none; /* ลบขอบสีน้ำเงิน */
+    border-radius: 12px;
+    margin-top: 40px; /* ระยะห่างของปุ่มกับตัวเมนู */
+    margin-bottom: 60px; /* ระยะห่างของปุ่มกับตัวเมนู */
+    animation: changeColor 10s infinite; /* เล่น animation เปลี่ยนสีเรื่อย ๆ */
+    transition: transform 0.2s ease; /* เพิ่ม transition เมื่อปุ่มถูกกด */
+}
+
+.navbar-nav .btn-primary:active {
+    transform: scale(1.1); /* ขยายขนาดของปุ่มเมื่อถูกกด */
+}
+.navbar-nav .btn-primary:hover {
+    color: black !important;
+}
+.navbar-right li a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10px; /* ปรับระยะห่างด้านบน */
+    margin-top: 36px; /* ปรับระยะห่างด้านล่าง */
+    margin-right: -10px;
+}
+.navbar-right li a .bi {
+    margin-bottom: 5px; /* ปรับระยะห่างระหว่างไอคอนและตัวหนังสือ */
+}
+.row .col-lg-4 {
+    padding: 5px ;
+    margin-bottom: 10px; /* ระยะห่างระหว่างรูปภาพ */
+}
+.row .col-lg-4 img {
+    border-radius: 15px; /* กำหนดขอบมน */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* เพิ่มเงา */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* เพิ่ม transition */
+}
+.row .col-lg-4 img:hover {
+    transform: translateY(-10px); /* ย้ายรูปภาพขึ้น */
+    box-shadow: 0 8px 14px rgba(218, 165, 32, 0.2); /* เพิ่มเงาสีทอง */
+}
+
+.nav .btn {
+    font-size: 14px;
+    padding: 8px 16px;
+}
+
+@media screen and (min-width: 1121px) {
+    .nav .btn {
+        font-size: 16px;
+        padding: 10px 20px;
+  }
+}
+@keyframes floatAnimation {
+    0% { transform: translate(0, 0); }
+    50% { transform: translate(0, -20px); }
+    100% { transform: translate(0, 0); }
+}
+
+#floatingEmoji {
+    animation: floatAnimation 5s ease-in-out infinite;
+    will-change: transform; /* ช่วยให้การเคลื่อนไหวลื่นไหลมากขึ้น */
+}
+#floatingEmoji {
+    font-size: 50px;
+    right: 250px;
+    position: fixed;
+} 
+.danger th {
+    background-color: rgb(190, 209, 255); /* สีพื้นหลัง */
+    color: rgb(91, 90, 90); /* สีของตัวหนังสือ */
+    font-weight: bold; /* ตัวหนังสือหนา */
+}
+table {
+    width: 60vw; /* ให้ตารางมีขนาดกว้างเท่ากับ viewport width */
+}
+
+th, td {
+    word-wrap: break-word; /* ข้อความจะถูกตัดเมื่อถึงขอบของเซลล์ */
+    background-color: #ffffff;
+}
+
+/* ตัวอย่างการใช้งาน Media Queries */
+@media screen and (max-width: 768px) {
+    th, td {
+        padding: 20px; /* ลดขนาด padding ในแต่ละเซลล์เมื่อหน้าจอมีขนาดเล็กลง */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    th, td {
+        padding: 5px; /* ลดขนาด padding อีกเล็กน้อยสำหรับหน้าจอที่ยิ่งเล็กลง */
+    }
+}
+#example th {
+    font-size: 18px; /* หรือขนาดอื่นที่คุณต้องการ */
+}

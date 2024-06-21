@@ -1,0 +1,28 @@
+/* gallery */
+
+body {
+	padding-top: 70px;
+}
+
+.jumbotron {
+	color: #fec3df;
+	background: #101212;
+	
+}
+
+.navbar-inverse {
+	background: #fec3df;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+	color: #101212;
+}
+
+.navbar-inverse .navbar-brand {
+	color: #101212;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}

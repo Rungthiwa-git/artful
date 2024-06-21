@@ -1,0 +1,48 @@
+.nav.nav-pills {
+    display: flex; /* ทำให้เรียงอยู่ในแนวนอน */
+    flex-wrap: wrap; /* ทำให้ปุ่มเข้าแถวเมื่อมีขนาดหน้าจอเล็ก */
+    justify-content: center; /* จัดตำแหน่งปุ่มให้ตรงกลาง */
+    gap: 10px; /* กำหนดระยะห่างระหว่างปุ่ม */
+    font-size: 16px; /* กำหนดขนาดตัวอักษรภายในปุ่ม */
+    font-weight: bold;
+    border-radius: 12px;
+}
+
+.nav-item {
+    margin-bottom: 10px; /* กำหนดระยะห่างด้านล่างของปุ่ม */
+}
+
+.nav-link {
+    color: white; /* กำหนดสีข้อความให้เป็นสีขาว */
+    padding: 12px 24px; /* กำหนดระยะห่างภายในปุ่ม */
+    background-color: #fb8fc5; /* สีพื้นหลัง */
+    box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.2); /* เงา */
+    transition: box-shadow 0.3s ease; /* เพิ่ม transition เมื่อ hover */
+    margin-top: 18px;
+}
+.container-fluid{
+    background-color: rgb(255, 171, 206);
+    border-radius: 12px;
+}
+.container h1{
+    animation: changeColor 5s infinite; 
+    color: #ec7f7f;
+    font-weight: bold;
+    text-align: center;
+}
+@keyframes changeColor {
+    25% { color: #f0b6f9; } /* เริ่มที่สีเดิม */
+    50% { color: #7f7fec; } /* เปลี่ยนสีไปเป็นสีใหม่ที่ต้องการ (ตัวอย่างเช่น #7f7fec) ที่ครึ่งทางของการทำงานของ animation */
+    100% { color: #ec7f7f; } /* กลับมาสู่สีเดิม */
+}
+.mb-4 select.form-select {
+    border-color: #ffffff; /* กำหนดสีเส้นขอบ */
+    background-color: #ffaad3;; /* กำหนดสีพื้นหลัง */
+    height: auto; /* กำหนดความสูง */
+    width: 300px;
+}
+.form-label{
+    font-weight: bold;
+}
+
+

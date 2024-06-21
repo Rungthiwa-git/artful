@@ -1,0 +1,49 @@
+<?php
+include 'condb.php';
+
+$categoryFilter = isset($_GET['category']) ? $_GET['category'] : 'all';
+
+$sqlImages = "SELECT PICTURE_ID, PICTURE_IMAGELINE,PICTURE_NAME FROM picture";
+
+if ($categoryFilter !== 'all') {
+    $sqlImages .= " WHERE CATEGORY_NAME = '$categoryFilter'";
+}
+
+$resultImages = mysqli_query($con, $sqlImages);
+
+if ($resultImages->num_rows > 0) {
+    $images = array();
+    $count = 0;
+
+    while ($row = $resultImages->fetch_assoc()) {
+        $imageId = $row['PICTURE_ID'];
+        $imagePath = $row['PICTURE_IMAGELINE'];
+        $imagename = $row['PICTURE_NAME'];
+
+        $images[] = '<div class="col-lg-4 col-sm-6 mb-4">
+                        <div class="card">
+                             <a href="detailpicture.php?id=' . $imageId . '">
+                            <img src="img/' . $imagePath . '" class="card-img-top" alt="Image" style="width: 100%; height: 400px;" onclick="window.location=\'detailpicture.php?id=' . $imageId . '\';">
+                            <div class="card-body">
+                                <h5 class="card-title">Picture name: ' . $imagename . '</h5>
+                                <!-- Add more details or actions as needed -->
+                            </div>
+                        </div>
+                    </div>';
+                   
+
+        $count++;
+
+        // Display a new row after every 9 images
+        if ($count % 9 === 0) {
+            echo '<div class="row">' . implode('', $images) . '</div>';
+            $images = array(); // Reset the array for the next row
+        }
+    }
+
+    // Display the remaining images if not a multiple of 9
+    if (!empty($images)) {
+        echo '<div class="row">' . implode('', $images) . '</div>';
+    }
+}
+?>
